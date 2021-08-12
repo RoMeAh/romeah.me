@@ -48,6 +48,7 @@ export const ProjectCard: FC<Project> = ({
         _hover={{ shadow: "lg" }}
       >
         <Image
+          alt={`${title}-logo`}
           src={logo}
           blurHash={blurHash}
           size="sm"
@@ -72,8 +73,8 @@ export const ProjectCard: FC<Project> = ({
                   {title}
                 </Text>
                 <HStack spacing="1">
-                  {technologies.map((tech) => (
-                    <Tag size="sm" colorScheme="blue">
+                  {technologies.map((tech, idx) => (
+                    <Tag size="sm" key={idx} colorScheme="blue">
                       {tech}
                     </Tag>
                   ))}
