@@ -1,39 +1,45 @@
-import {
-  Box,
-  Button,
-  Circle,
-  Flex,
-  Heading,
-  IconButton,
-  Spacer,
-  Stack,
-  useColorMode,
-  VStack,
-  Image,
-  Text,
-  useMediaQuery,
-  Icon,
-  HStack,
-} from "@chakra-ui/react";
-import { useRouter } from "next/router";
-import NextLink from "next/link";
 import Head from "next/head";
-import {
-  FaGithub,
-  FaInstagram,
-  FaSun,
-  FaMoon,
-  FaDiscord,
-  FaGoogle,
-  FaSpotify,
-} from "react-icons/fa";
-import { DiWebplatform, DiBackbone, DiRust } from "react-icons/di";
+import { useColorMode, VStack, useMediaQuery } from "@chakra-ui/react";
+import { Header } from "../components/Header";
+import { Info } from "../components/Info";
+import { Skills } from "../components/Skills";
+import { Projects } from "../components/Projects";
+import { Project } from "../components/ProjectCard";
+
+const projects: Project[] = [
+  {
+    title: "BlazeX",
+    technologies: ["Rust", "LLVM"],
+    logo: "https://media.discordapp.net/attachments/713410105928056856/837727145060597810/bzs.png",
+    link: "https://bzx.blazify.rocks/#/",
+    description:
+      "BlazeX is a Object Oriented AOT Compiled Language which is a work in progress",
+    blurHash: "",
+  },
+  {
+    title: "EvolveJS",
+    technologies: ["Typescript", "Javascript", "Discord"],
+    logo: "https://media.discordapp.net/attachments/712948948343455856/734829166821900438/EvolveJS.png",
+    link: "https://github.com/BlazifyOrg/evolvejs",
+    description:
+      "EvolveJS is a Discord Library in which bots can be made. We provide high control over the module so that the customizability can be the top of the level. Currently isn't maintained anymore.",
+    blurHash: "",
+  },
+  {
+    title: "RoMeAhX",
+    technologies: ["Python"],
+    logo: "https://media1.thehungryjpeg.com/thumbs2/800_3656330_on7fdo7vex3a08il6fi1tnyf10dplkpjo4bkzfmt_monogram-ai-logo-design.jpg",
+    link: "https://github.com/RoMeAh/romeax",
+    description:
+      "A simple assistant which listens to commands and obeys them, it can do simple things for now. It's not a serious project, just for fun",
+    blurHash: "",
+  },
+];
 
 export default function Home() {
   const { colorMode, toggleColorMode } = useColorMode();
-  const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
+  const [large] = useMediaQuery("(min-width:600px)");
   const isDark = colorMode == "dark";
-  const router = useRouter();
 
   return (
     <>
@@ -41,6 +47,7 @@ export default function Home() {
         <title>Ronit Rahaman</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta property="og:title" content="Ronit Rahaman" />
+        <meta property="og:description" content="Ronit Rahaman" />
         <link
           rel="icon"
           href="https://avatars.githubusercontent.com/u/62307220?s=400&u=753ca830e7e181cf2bbd828819d936bd6eac84c8&v=4"
@@ -48,174 +55,10 @@ export default function Home() {
         />
       </Head>
       <VStack p={5}>
-        <Flex w="100%">
-          <Heading ml="8" size="md" fontWeight="semibold" color="cyan.400">
-            RoMeAh
-          </Heading>
-
-          <Spacer></Spacer>
-          <IconButton
-            aria-label="github"
-            ml={2}
-            icon={<FaGithub />}
-            isRound
-            onClick={() => router.push("https://github.com/RoMeAh")}
-          />
-          <IconButton
-            aria-label="discord"
-            ml={2}
-            icon={<FaDiscord />}
-            isRound
-            onClick={() => router.push("https://discord.gg/9bnpjqY")}
-          />
-          <IconButton
-            aria-label="instagram"
-            ml={2}
-            icon={<FaInstagram />}
-            isRound
-            onClick={() => router.push("https://www.instagram.com/not_romeah/")}
-          />
-          <IconButton
-            aria-label="theme-toggle"
-            ml={8}
-            icon={isDark ? <FaSun /> : <FaMoon />}
-            isRound
-            onClick={toggleColorMode}
-          />
-        </Flex>
-
-        <Stack>
-          <Circle
-            position="absolute"
-            bg="blue.100"
-            opacity="0.1"
-            w="300px"
-            h="300px"
-            alignSelf="flex-end"
-          />
-          <Flex
-            direction={isNotSmallerScreen ? "row" : "column"}
-            spacing="200px"
-            p={isNotSmallerScreen ? "32" : "0"}
-            alignSelf="flex-start"
-          >
-            <Box mt={isNotSmallerScreen ? "0" : 16} align="flex-start">
-              <Text fontSize="5xl" fontWeight="semibold">
-                Hi, I am
-              </Text>
-              <Text
-                fontSize="7xl"
-                fontWeight="bold"
-                bgGradient="linear(to-r, cyan.400, blue.500, purple.600)"
-                bgClip="text"
-              >
-                Ronit Rahaman
-              </Text>
-              <Text
-                fontWeight="semibold"
-                color={isDark ? "gray.200" : "gray.500"}
-              >
-                Typescript, Javascript and Rust lover. Founder of Blazify
-                (https://blazify.rocks). Making a programming language named
-                BlazeX in Rust.
-              </Text>
-              <Button mt={8} colorScheme="blue">
-                <NextLink href="mailto:romeah@blazify.rocks">Hire Me</NextLink>
-              </Button>
-              <Button ml={2} mt={8} colorScheme="blue">
-                <NextLink href="https://cdn.discordapp.com/attachments/713410105928056856/874947398613491712/Resume.pdf">
-                  Download Resume
-                </NextLink>
-              </Button>
-            </Box>
-            <Image
-              alignSelf="center"
-              mt={isNotSmallerScreen ? "0" : "12"}
-              mb={isNotSmallerScreen ? "0" : "12"}
-              borderRadius="full"
-              backgroundColor="transparent"
-              boxShadow="lg"
-              boxSize="300px"
-              src="https://avatars.githubusercontent.com/u/62307220?s=400&u=753ca830e7e181cf2bbd828819d936bd6eac84c8&v=4"
-            />
-          </Flex>
-        </Stack>
-
-        <Flex
-          direction={isNotSmallerScreen ? "row" : "column"}
-          w="100%"
-          maxWidth={{ base: "100vh", md: "130vh", lg: "130vh", xl: "130vh" }}
-        >
-          <Box alignSelf="center" py="16">
-            <Heading fontWeight="extrabold" color="cyan.500" size="4xl">
-              2+
-            </Heading>
-            <Text fontSize="2xl" color="gray.400">
-              Years of Experience
-            </Text>
-          </Box>
-          <Box alignSelf="center" px="32" py="16">
-            <Text fontWeight="bold" fontSize="2xl">
-              Product Designer and Developer, specialised in full stack
-              development.
-            </Text>
-            <Flex direction={isNotSmallerScreen ? "row" : "column"} mt={8}>
-              <Flex
-                rounded="xl"
-                direction="column"
-                mt={4}
-                bg="blue.400"
-                h="30vh"
-                w="30vh"
-                justify="flex-end"
-              >
-                <Icon color="white" p="4" as={DiRust} w="24" h="24" />
-                <Text color="white" p="4" fontSize="xl" fontWeight="semibold">
-                  Systems Engineering
-                </Text>
-              </Flex>
-              <Flex
-                rounded="xl"
-                direction="column"
-                mt={4}
-                ml={isNotSmallerScreen ? 4 : 0}
-                bg="gray.100"
-                h="30vh"
-                w="30vh"
-                justify="flex-end"
-                _hover={{ bg: "teal.400" }}
-              >
-                <Icon color="black" p="4" as={DiBackbone} w="24" h="24" />
-                <Text color="black" p="4" fontSize="xl" fontWeight="semibold">
-                  REST and GraphQL APIs
-                </Text>
-              </Flex>
-              <Flex
-                rounded="xl"
-                direction="column"
-                mt={4}
-                ml={isNotSmallerScreen ? 4 : 0}
-                bg="gray.100"
-                h="30vh"
-                w="30vh"
-                justify="flex-end"
-                _hover={{ bg: "green.400" }}
-              >
-                <Icon as={DiWebplatform} p="4" w="24" h="24" color="black" />
-                <Text color="black" p="4" fontSize="xl" fontWeight="semibold">
-                  React & Svelte Websites
-                </Text>
-              </Flex>
-            </Flex>
-          </Box>
-        </Flex>
-
-        <HStack spacing="24">
-          <Icon as={FaDiscord} boxSize="50" />
-          <Icon as={FaGoogle} boxSize="50" />
-          <Icon as={FaSpotify} boxSize="50" />
-          <Icon as={FaInstagram} boxSize="50" />
-        </HStack>
+        <Header isDark={isDark} toggleColorMode={toggleColorMode} />
+        <Info isDark={isDark} large={large} />
+        <Projects projects={projects} />
+        <Skills large={large} />
       </VStack>
     </>
   );
