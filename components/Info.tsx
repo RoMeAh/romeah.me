@@ -6,15 +6,16 @@ import {
   Image,
   Stack,
   Text,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import { FC } from "react";
+import { useMediaQuery } from "react-responsive";
 
-interface InfoProps {
-  large: boolean;
-  isDark: boolean;
-}
+interface InfoProps {}
 
-export const Info: FC<InfoProps> = ({ large, isDark }) => {
+export const Info: FC<InfoProps> = ({}) => {
+  const large = useMediaQuery({ minWidth: 650 });
+
   return (
     <Stack>
       <Circle
@@ -23,6 +24,8 @@ export const Info: FC<InfoProps> = ({ large, isDark }) => {
         opacity="0.1"
         w="300px"
         h="300px"
+        mt={12}
+        mr={8}
         alignSelf="flex-end"
       />
       <Flex
@@ -43,7 +46,10 @@ export const Info: FC<InfoProps> = ({ large, isDark }) => {
           >
             Ronit Rahaman
           </Text>
-          <Text fontWeight="semibold" color={isDark ? "gray.200" : "gray.500"}>
+          <Text
+            fontWeight="semibold"
+            color={useColorModeValue("gray.500", "gray.200")}
+          >
             Self-Educated and motivated developer who has high experience
             working with backend and systems engineering. Organized, and planned
             approach to anything and everything. Mainly a typescript/javascript

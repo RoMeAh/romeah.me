@@ -1,10 +1,11 @@
 import Head from "next/head";
-import { useColorMode, VStack, useMediaQuery } from "@chakra-ui/react";
+import { useColorMode, VStack } from "@chakra-ui/react";
 import { Header } from "../components/Header";
 import { Info } from "../components/Info";
 import { Skills } from "../components/Skills";
 import { Projects } from "../components/Projects";
 import { Project } from "../components/ProjectCard";
+import { Footer } from "../components/Footer";
 
 const projects: Project[] = [
   {
@@ -37,10 +38,6 @@ const projects: Project[] = [
 ];
 
 export default function Home() {
-  const { colorMode, toggleColorMode } = useColorMode();
-  const [large] = useMediaQuery("(min-width:600px)");
-  const isDark = colorMode == "dark";
-
   return (
     <>
       <Head>
@@ -55,10 +52,11 @@ export default function Home() {
         />
       </Head>
       <VStack p={5}>
-        <Header isDark={isDark} toggleColorMode={toggleColorMode} />
-        <Info isDark={isDark} large={large} />
+        <Header />
+        <Info />
         <Projects projects={projects} />
-        <Skills large={large} />
+        <Skills />
+        <Footer />
       </VStack>
     </>
   );

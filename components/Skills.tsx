@@ -1,12 +1,13 @@
 import { Flex, Box, Heading, Text, Icon } from "@chakra-ui/react";
 import { FC } from "react";
 import { DiRust, DiBackbone, DiWebplatform } from "react-icons/di";
+import { useMediaQuery } from "react-responsive";
 
-interface SkillsProps {
-  large: boolean;
-}
+interface SkillsProps {}
 
-export const Skills: FC<SkillsProps> = ({ large }) => {
+export const Skills: FC<SkillsProps> = ({}) => {
+  const large = useMediaQuery({ minWidth: 650 });
+
   return (
     <Flex
       direction={large ? "row" : "column"}

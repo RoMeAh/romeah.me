@@ -50,7 +50,6 @@ export const ProjectCard: FC<Project> = ({
         <Image
           alt={`${title}-logo`}
           src={logo}
-          blurHash={blurHash}
           size="sm"
           width={33}
           height={33}

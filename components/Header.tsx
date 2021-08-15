@@ -1,4 +1,12 @@
-import { Flex, Heading, IconButton, Spacer } from "@chakra-ui/react";
+import {
+  Flex,
+  Heading,
+  HStack,
+  IconButton,
+  Spacer,
+  useColorMode,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import { FC } from "react";
 import {
   FaDiscord,
@@ -7,13 +15,13 @@ import {
   FaMoon,
   FaSun,
 } from "react-icons/fa";
+import { SocialButton } from "./SocialButton";
 
-interface HeaderProps {
-  isDark: boolean;
-  toggleColorMode: () => void;
-}
+interface HeaderProps {}
 
-export const Header: FC<HeaderProps> = ({ isDark, toggleColorMode }) => {
+export const Header: FC<HeaderProps> = ({}) => {
+  const { toggleColorMode } = useColorMode();
+
   return (
     <Flex w="100%">
       <Heading ml="8" size="md" fontWeight="semibold" color="cyan.400">
@@ -21,31 +29,21 @@ export const Header: FC<HeaderProps> = ({ isDark, toggleColorMode }) => {
       </Heading>
 
       <Spacer></Spacer>
-      <IconButton
-        aria-label="github"
-        ml={2}
-        icon={<FaGithub />}
-        isRound
-        onClick={() => window.open("https://github.com/RoMeAh")}
-      />
-      <IconButton
-        aria-label="discord"
-        ml={2}
-        icon={<FaDiscord />}
-        isRound
-        onClick={() => window.open("https://discord.gg/9bnpjqY")}
-      />
-      <IconButton
-        aria-label="instagram"
-        ml={2}
-        icon={<FaInstagram />}
-        isRound
-        onClick={() => window.open("https://www.instagram.com/not_romeah/")}
-      />
+      <HStack spacing={2}>
+        <SocialButton label="Discord" href="https://github.com/RoMeAh">
+          <FaGithub />
+        </SocialButton>
+        <SocialButton label="Discord" href="https://discord.gg/9bnpjqY">
+          <FaDiscord />
+        </SocialButton>
+        <SocialButton label="Instagram" href="https://instagram.com/not_romeah">
+          <FaInstagram />
+        </SocialButton>
+      </HStack>
       <IconButton
         aria-label="theme-toggle"
         ml={8}
-        icon={isDark ? <FaSun /> : <FaMoon />}
+        icon={useColorModeValue(<FaMoon />, <FaSun />)}
         isRound
         onClick={toggleColorMode}
       />
