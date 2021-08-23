@@ -24,13 +24,13 @@ export const Header: FC<HeaderProps> = ({}) => {
 
   return (
     <Flex w="100%">
-      <Heading ml="8" size="md" fontWeight="semibold" color="cyan.400">
+      <Heading ml={4} size="md" fontWeight="semibold" color="cyan.400">
         RoMeAh
       </Heading>
 
       <Spacer></Spacer>
       <HStack spacing={2}>
-        <SocialButton label="Discord" href="https://github.com/RoMeAh">
+        <SocialButton label="Github" href="https://github.com/RoMeAh">
           <FaGithub />
         </SocialButton>
         <SocialButton label="Discord" href="https://discord.gg/9bnpjqY">

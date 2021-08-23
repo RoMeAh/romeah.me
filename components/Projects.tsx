@@ -11,12 +11,10 @@ const MotionBox = motion(
   forwardRef((props, ref: any) => <Box ref={ref} {...props} />)
 ) as FC<any>;
 
-const ORANGE = "#ff9400";
-
 export const Projects: FC<ProjectsProps> = ({ projects }) => {
   return (
     <VStack align="start" spacing={8}>
-      <Heading underlineColor={ORANGE} mt={0} mb={0}>
+      <Heading mt={0} mb={0}>
         Projects
       </Heading>
       <AnimateSharedLayout>

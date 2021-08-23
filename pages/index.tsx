@@ -42,7 +42,7 @@ export default function Home() {
     <>
       <Head>
         <title>Ronit Rahaman</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta content="width=device-width" name="viewport" />
         <meta property="og:title" content="Ronit Rahaman" />
         <meta property="og:description" content="Ronit Rahaman" />
         <link
