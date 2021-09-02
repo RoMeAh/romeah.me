@@ -55,6 +55,7 @@ export const ProjectCard: FC<Project> = ({
           height={33}
           layout="fixed"
           rounded="md"
+          blur={blurHash}
         />
         <VStack align="start" justify="flex-start">
           <VStack spacing={0} align="start">

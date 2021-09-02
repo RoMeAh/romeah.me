@@ -50,16 +50,14 @@ export const Info: FC<InfoProps> = ({}) => {
             fontWeight="semibold"
             color={useColorModeValue("gray.500", "gray.200")}
           >
-            Self-Educated and motivated developer who has high experience
-            working with backend and systems engineering. Organized, and planned
-            approach to anything and everything. Mainly a typescript/javascript
-            developer who has a good sense about it. I have worked on mainly
-            projects to improve my skills, I also have a pretty good experience
-            with rust and making systems related stuff. I have good skills with
-            backend development (REST APIs and GraphQL APIs), systems related
-            development, and decent front end experience with React and Svelte.
+            Self Educated and Motivated developer with hood experience working
+            with backend and systems engineering. Prefers organized, and planned
+            approach to anything and everything. Worked on many projects to
+            improve skills, experience with rust. Expertise in Full stack and
+            Systems Engineering.
           </Text>
           <Button
+            disabled={false}
             mt={8}
             colorScheme="blue"
             onClick={() => window.open("mailto:romeah@blazify.rocks")}
