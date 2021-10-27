@@ -38,7 +38,7 @@ const projects: Project[] = [
     title: "Blazify Discord Bot",
     technologies: ["Typescript", "Discord.JS"],
     link: "https://github.com/RoMeAh-zz/blazify-discord-bot",
-    logo: "",
+    logo: "https://media.discordapp.net/attachments/836827220496220211/884397983653834762/blazif.png?width=452&height=452",
     description: "First project i ever worked on, a multi-purpose discord bot.",
     blurHash: "",
   },
