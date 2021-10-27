@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { useColorMode, VStack } from "@chakra-ui/react";
+import { VStack } from "@chakra-ui/react";
 import { Header } from "../components/Header";
 import { Info } from "../components/Info";
 import { Skills } from "../components/Skills";
@@ -12,9 +12,17 @@ const projects: Project[] = [
     title: "BlazeX",
     technologies: ["Rust", "LLVM"],
     logo: "https://media.discordapp.net/attachments/713410105928056856/837727145060597810/bzs.png",
-    link: "https://bzx.blazify.rocks/#/",
+    link: "https://blazex.blazify.rocks/#/",
     description:
       "BlazeX is a Object Oriented AOT Compiled Language which is a work in progress",
+    blurHash: "",
+  },
+  {
+    title: "rustykernel",
+    technologies: ["Rust", "kernel"],
+    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDneRyMLfzZSEpUiQ86C2UKGkc8oYChvldmw&usqp=CAU",
+    link: "https://github.com/RoMeAh-zz/rustykernel",
+    description: "A kernel made in rust",
     blurHash: "",
   },
   {
@@ -27,10 +35,18 @@ const projects: Project[] = [
     blurHash: "",
   },
   {
+    title: "Blazify Discord Bot",
+    technologies: ["Typescript", "Discord.JS"],
+    link: "https://github.com/RoMeAh-zz/blazify-discord-bot",
+    logo: "",
+    description: "First project i ever worked on, a multi-purpose discord bot.",
+    blurHash: "",
+  },
+  {
     title: "RoMeAhX",
     technologies: ["Python"],
     logo: "https://media1.thehungryjpeg.com/thumbs2/800_3656330_on7fdo7vex3a08il6fi1tnyf10dplkpjo4bkzfmt_monogram-ai-logo-design.jpg",
-    link: "https://github.com/RoMeAh/romeax",
+    link: "https://github.com/RoMeAh-zz/romeax",
     description:
       "A simple assistant which listens to commands and obeys them, it can do simple things for now. It's not a serious project, just for fun",
     blurHash: "",

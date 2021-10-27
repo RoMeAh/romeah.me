@@ -50,10 +50,10 @@ export const Info: FC<InfoProps> = ({}) => {
             fontWeight="semibold"
             color={useColorModeValue("gray.500", "gray.200")}
           >
-            Self Educated and Motivated developer with hood experience working
+            Self educated and motivated developer with good experience working
             with backend and systems engineering. Prefers organized, and planned
             approach to anything and everything. Worked on many projects to
-            improve skills, experience with rust. Expertise in Full stack and
+            improve skills, experience with rust. Expertise in Backend and
             Systems Engineering.
           </Text>
           <Button
@@ -69,9 +69,7 @@ export const Info: FC<InfoProps> = ({}) => {
             mt={8}
             colorScheme="blue"
             onClick={() =>
-              window.open(
-                "https://cdn.discordapp.com/attachments/713410105928056856/874947398613491712/Resume.pdf"
-              )
+              window.open("https://my.indeed.com/p/ronitr-jm1n5wm")
             }
           >
             Download Resume
