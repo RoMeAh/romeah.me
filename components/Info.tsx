@@ -60,7 +60,7 @@ export const Info: FC<InfoProps> = ({}) => {
             disabled={false}
             mt={8}
             colorScheme="blue"
-            onClick={() => window.open("mailto:romeah@blazify.rocks")}
+            onClick={() => window.open("mailto:runa.ronit3129@gmail.com")}
           >
             Hire Me
           </Button>

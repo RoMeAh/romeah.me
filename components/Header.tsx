@@ -14,6 +14,8 @@ import {
   FaInstagram,
   FaMoon,
   FaSun,
+  FaTwitch,
+  FaTwitter,
 } from "react-icons/fa";
 import { SocialButton } from "./SocialButton";
 
@@ -36,8 +38,14 @@ export const Header: FC<HeaderProps> = ({}) => {
         <SocialButton label="Discord" href="https://discord.gg/9bnpjqY">
           <FaDiscord />
         </SocialButton>
+        <SocialButton label="Twitter" href="https://twitter.com/RoMeAh">
+          <FaTwitter />
+        </SocialButton>
         <SocialButton label="Instagram" href="https://instagram.com/not_romeah">
           <FaInstagram />
+        </SocialButton>
+        <SocialButton label="Twitch" href="https://twitch.tv/romeah_wreaks">
+          <FaTwitch />
         </SocialButton>
       </HStack>
       <IconButton
