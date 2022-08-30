@@ -16,7 +16,7 @@ export const Skills: FC<SkillsProps> = ({}) => {
     >
       <Box alignSelf="center" py="16">
         <Heading fontWeight="extrabold" color="cyan.500" size="4xl">
-          2+
+          4+
         </Heading>
         <Text fontSize="2xl" color="gray.400">
           Years of Experience
@@ -36,9 +36,9 @@ export const Skills: FC<SkillsProps> = ({}) => {
             w="30vh"
             justify="flex-end"
           >
-            <Icon color="white" p="4" as={DiRust} w="24" h="24" />
+            <Icon color="white" p="4" as={DiBackbone} w="24" h="24" />
             <Text color="white" p="4" fontSize="xl" fontWeight="semibold">
-              Systems Engineering
+              Backend Engineering
             </Text>
           </Flex>
           <Flex
@@ -52,9 +52,9 @@ export const Skills: FC<SkillsProps> = ({}) => {
             justify="flex-end"
             _hover={{ bg: "teal.400" }}
           >
-            <Icon color="black" p="4" as={DiBackbone} w="24" h="24" />
+            <Icon color="black" p="4" as={DiRust} w="24" h="24" />
             <Text color="black" p="4" fontSize="xl" fontWeight="semibold">
-              REST and GraphQL APIs
+              Systems & Blockchain Engineering
             </Text>
           </Flex>
           <Flex
@@ -70,7 +70,7 @@ export const Skills: FC<SkillsProps> = ({}) => {
           >
             <Icon as={DiWebplatform} p="4" w="24" h="24" color="black" />
             <Text color="black" p="4" fontSize="xl" fontWeight="semibold">
-              React & Svelte Websites
+              Frontend & Full stack Engineering
             </Text>
           </Flex>
         </Flex>

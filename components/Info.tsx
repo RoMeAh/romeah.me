@@ -54,7 +54,8 @@ export const Info: FC<InfoProps> = ({}) => {
             with backend and systems engineering. Prefers organized, and planned
             approach to anything and everything. Worked on many projects to
             improve skills, experience with rust. Expertise in Backend and
-            Systems Engineering.
+            Systems Engineering. Looking for Oppurtunies in Back-end
+            Engineering.
           </Text>
           <Button
             disabled={false}

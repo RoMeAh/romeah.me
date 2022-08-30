@@ -32,16 +32,16 @@ export const Header: FC<HeaderProps> = ({}) => {
 
       <Spacer></Spacer>
       <HStack spacing={2}>
-        <SocialButton label="Github" href="https://github.com/RoMeAh">
+        <SocialButton label="Github" href="https://github.com/n0t-r0n1t">
           <FaGithub />
         </SocialButton>
         <SocialButton label="Discord" href="https://discord.gg/9bnpjqY">
           <FaDiscord />
         </SocialButton>
-        <SocialButton label="Twitter" href="https://twitter.com/RoMeAh">
+        <SocialButton label="Twitter" href="https://twitter.com/romeahhh">
           <FaTwitter />
         </SocialButton>
-        <SocialButton label="Instagram" href="https://instagram.com/not_romeah">
+        <SocialButton label="Instagram" href="https://instagram.com/n0t_r0n1t">
           <FaInstagram />
         </SocialButton>
         <SocialButton label="Twitch" href="https://twitch.tv/romeah_wreaks">
